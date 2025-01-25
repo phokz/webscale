@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>_WEIGHT_ _UNIT_</title>
+  <style>
+    button {background-color: #007BFF; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;}
+    button.unit {background-color: #007B1B;}
+  </style>
+
+</head>
+<body>
+  <h1>_WEIGHT_ _UNIT_</h1>
+  <form action="/tare" method="POST">
+    <button type="submit" class='tare'>Tare</button>
+  </form>
+  <form action="/unit" method="POST">
+    <button type="submit" class='unit'>Unit</button>
+  </form>
+
+<pre><code>
+# API commands
+
+### tare
+
+```bash
+curl -X POST http://localhost:4567/api/tare.json
+```
+
+
+### unit
+
+```bash
+curl -X POST http://localhost:4567/api/unit.json
+```
+
+
+Reading current value:
+
+```bash
+curl http://localhost:4567/api/scale.json
+{"weight":0.0,"unit":"ct"}
+```
+</code></pre>
+
+</body>
+</html>

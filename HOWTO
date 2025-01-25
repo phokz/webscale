@@ -1,0 +1,22 @@
+# API commands
+
+### tare
+
+```bash
+curl -X POST http://localhost:4567/api/tare.json
+```
+
+
+### unit
+
+```bash
+curl -X POST http://localhost:4567/api/unit.json
+```
+
+
+Reading current value:
+
+```bash
+curl http://localhost:4567/api/scale.json
+{"weight":0.0,"unit":"ct"}
+```

@@ -1,0 +1,11 @@
+[Unit]
+Description=Webscale
+After=syslog.target network.target
+
+[Service]
+User=webscale
+Group=dialout
+ExecStart=/opt/webscale/app.rb -e production
+
+[Install]
+WantedBy=multi-user.target
